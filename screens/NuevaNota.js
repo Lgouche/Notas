@@ -19,7 +19,6 @@ export default function NuevaNota({ navigation }) {
           descripcion
         }
         await addDoc(collection(db, 'notas'), nota);
-        Alert.alert('Éxito', 'Nota guardada correctamente');
         setTitulo('');
         setDescripcion('');
         navigation.navigate('Home');

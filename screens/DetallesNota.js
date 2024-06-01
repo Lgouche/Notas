@@ -27,6 +27,7 @@ export default function DetallesNota({ route, navigation }) {
                 descripcion: newDescripcion
             });
             Alert.alert('Éxito', 'Nota actualizada correctamente');
+            navigation.navigate('Home');
         } catch (error) {
             console.error('Error al editar la nota:', error);
         }
