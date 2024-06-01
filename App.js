@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useFocusEffect } from '@react-navigation/native'; // Importa useFocusEffect
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './screens/Home';
 import NuevaNota from './screens/NuevaNota';
-import DetallaesNota from './screens/DetallaesNota';
+import DetallesNota from './screens/DetallesNota';
 
 export default function App() {
 
@@ -21,7 +21,6 @@ export default function App() {
             headerTitleAlign: 'center',
             headerStyle: { backgroundColor: '#5EDB99' },
             headerTintColor: '#000000',
-
           }} />
         <Stack.Screen name="Nueva Nota"
           component={NuevaNota}
@@ -30,16 +29,14 @@ export default function App() {
             headerTitleAlign: 'center',
             headerStyle: { backgroundColor: '#5EDB99' },
             headerTintColor: '#000000',
-
           }} />
         <Stack.Screen name="Detalles"
-          component={DetallaesNota}
+          component={DetallesNota}
           options={{
             title: 'Detalles',
             headerTitleAlign: 'center',
             headerStyle: { backgroundColor: '#5EDB99' },
             headerTintColor: '#000000',
-
           }} />
       </Stack.Navigator>
     )
