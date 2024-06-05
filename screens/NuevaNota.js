@@ -18,6 +18,7 @@ export default function NuevaNota({ navigation }) {
           titulo,
           descripcion
         }
+        
         await addDoc(collection(db, 'notas'), nota);
         setTitulo('');
         setDescripcion('');
